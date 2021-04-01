@@ -3,7 +3,7 @@ const passport = require('passport');
 
 Auth.get('/logout', (req, res) => {
   req.logout();
-  res.redirect('http://localhost:3000/');
+  res.redirect('http://localhost:9000/');
 });
 
 Auth.get('/google', passport.authenticate('google', {
@@ -11,7 +11,7 @@ Auth.get('/google', passport.authenticate('google', {
 }));
 
 Auth.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.redirect('http://localhost:3000/story/');
+  res.redirect('http://localhost:9000/story/');
 })
 
 Auth.get('/facebook', passport.authenticate('facebook', {
@@ -19,7 +19,7 @@ Auth.get('/facebook', passport.authenticate('facebook', {
 }));
 
 Auth.get('/facebook/redirect', passport.authenticate('facebook'), (req, res) => {
-  res.redirect('http://localhost:3000/story/')
+  res.redirect('http://localhost:9000/story/')
 })
 
 module.exports = Auth;
