@@ -1,7 +1,7 @@
 "use strict";
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 3000;
 const formData = require('express-form-data');
 const cors = require('cors');
 const passport = require('passport');
