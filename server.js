@@ -1,7 +1,7 @@
 "use strict";
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9000;
 const formData = require('express-form-data');
 const cors = require('cors');
 const passport = require('passport');
@@ -32,7 +32,7 @@ app.enable('trust proxy');
 
 client.connect((err)=> {
   console.log('Successfully connected to the server')
-  const db = client.db('a-better-u');
+  const db = client.db('workouts');
   app.locals.db = db;
   app.locals.exerciseList = db.collection('exerciseList');
   app.locals.nutrition = db.collection('nutrition');
