@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Key} from '../API/API_Key';
 import Heart from '../assets/heart.svg';
 import BlueHeart from '../assets/filled-in-heart.svg';
 import {NutritionContext} from './ExportContexts';
@@ -118,7 +117,7 @@ export class AddFoodProvider extends Component {
     let search = e.target.value;
     if(e.key === 'Enter' && search !== ''){
       e.preventDefault();
-      let uri = encodeURI(`https://api.nal.usda.gov/ndb/search/?format=json&q=${search}&sort=r&offset=0&api_key=${Key}`)
+      let uri = encodeURI(`https://api.nal.usda.gov/ndb/search/?format=json&q=${search}&sort=r&offset=0&api_key=eVJvhpdGCWaX1Ses0JZnFv4CdI9TkBoMRSoycnCd`)
       fetch(uri)
         .then(response => response.json())
         .then(data => {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {CalculatorContext} from './CalculatorContext';
-import {Key} from '../API/API_Key';
 
 export const NutritionContext = React.createContext();
 
@@ -103,7 +102,7 @@ export class NutritionProvider extends Component {
   }
 
   FetchReports = () => {
-    let uri = encodeURI(`https://api.nal.usda.gov/ndb/V2/reports?${this.state.ndbno_list}&type=b&format=json&api_key=${Key}`);
+    let uri = encodeURI(`https://api.nal.usda.gov/ndb/V2/reports?${this.state.ndbno_list}&type=b&format=json&api_key=eVJvhpdGCWaX1Ses0JZnFv4CdI9TkBoMRSoycnCd`);
     fetch(uri,{
       mode: 'cors'
     })
